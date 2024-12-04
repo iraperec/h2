@@ -15,13 +15,12 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void createUsersTable() {
-        try {
+
             String sql = "CREATE TABLE IF NOT EXISTS USERS (`id` BIGINT AUTO_INCREMENT PRIMARY KEY, `name` VARCHAR(50), `lastName` VARCHAR(50), `age` TINYINT);";
 
             try (Statement statement = connection.createStatement()) {
                 statement.execute(sql);
-            }
-        } catch (Exception e) {
+            } catch (Exception e) {
             System.out.println("Connection failed");
         }
     }

@@ -5,6 +5,7 @@ import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
 import jm.task.core.jdbc.util.Util;
+import org.hibernate.SessionFactory;
 
 import java.sql.SQLException;
 
@@ -25,9 +26,10 @@ public class Main {
         userService.saveUser(user3.getName(), user3.getLastName(), user3.getAge());
         userService.saveUser(user.getName(), user.getLastName(), user.getAge());
 
-        System.out.println(userService.getAllUsers());
-        userService.cleanUsersTable();
-        userService.dropUsersTable();
+//        System.out.println(userService.getAllUsers());
+//        userService.cleanUsersTable();
+//        userService.dropUsersTable();
+
 
 
 
